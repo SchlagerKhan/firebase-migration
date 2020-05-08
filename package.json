@@ -1,0 +1,17 @@
+{
+  "name": "firebase-migration",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "setup": "cp src/opts.temp.js src/opts.js",
+    "create:users": "node src/create-users.js",
+    "import:users": "yarn create:users && bash src/import.sh",
+    "validate": "node src/validate.js",
+    "start": "yarn import:users && yarn validate"
+  },
+  "devDependencies": {
+    "firebase": "^7.14.3",
+    "firebase-tools": "^8.2.0",
+    "sha1": "^1.1.1"
+  }
+}
