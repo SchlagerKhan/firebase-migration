@@ -10,6 +10,6 @@
 There are four commands:
 
 - `yarn create:users` - Programmtically creates `src/users.json` which is used by the import scripts (you don't have to run this manually)
-- `yarn import` - imports the users to firebase
+- `yarn import:users` - imports the users to firebase
 - `yarn validate` - Validates the newly created user
 - `yarn start` - runs `import` and `validate`
