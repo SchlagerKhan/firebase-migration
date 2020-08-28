@@ -6,7 +6,7 @@ const { user, SALT } = require("./opts.js");
 const { email, password } = user;
 
 const passwordHash = sha(`${SALT}${password}`); // password <=> aa2cc735aa01f661a39d6a03214d2e551eb0d8ad
-const passwordHashBase64 = Buffer.from(passwordHash).toString("base64"); // password <=> YWEyY2M3MzVhYTAxZjY2MWEzOWQ2YTAzMjE0ZDJlNTUxZWIwZDhhZA==
+const passwordHashBase64 = Buffer.from(passwordHash, 'hex').toString("base64"); // password <=> /CLsqgJy/ghq+WzN2jXG0iAWZJY=
 const saltBase64 = Buffer.from(SALT).toString("base64"); // 123456789 <=> MTIzNDU2Nzg5
 
 const users = [
